@@ -1,15 +1,15 @@
 <body class="text-center">   
   <main class="form-signin">
-    <form>
+   
       <img class="py-5" src="assets/person-square.svg" alt="login-image" width="200px">
       <h1 class="h3 mb-3 fw-normal pb-3">Iniciar sesión</h1>
-  
+   <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
       <div class="form-floating">
-        <input type="text" class="form-control" id="floatingInput" placeholder="usuario">
+        <input type="text" class="form-control" id="nombreUsuario" name="nombreUsuario" placeholder="usuario" [(ngModel)]="nombreUsuario" required >
         <label for="floatingInput">Usuario</label>
       </div>
       <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <input type="password" class="form-control" id="Password" placeholder="Password" [(ngModel)]="password" required >
         <label for="floatingPassword">Contraseña</label>
       </div>
       
