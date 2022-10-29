@@ -15,7 +15,8 @@
       </ul>
     </div>
     <div class="ps-4">
-      <button type="button" class="btn btn-outline-prymary btn-lg text-dark fs-5 fw-bold me-2" (click)="login()">Ingresar</button>
+      <button type="button" class="btn btn-outline-prymary btn-lg text-dark fs-5 fw-bold me-2" (click)="login()" *ngIf="!isLogged" >Ingresar</button>
+      <button type="button" class="btn btn-outline-prymary btn-lg text-dark fs-5 fw-bold me-2" (click)="onLogOut()" *ngIf="isLogged" >Cerrar sesión</button>
     </div>
   </div>
 </nav>
