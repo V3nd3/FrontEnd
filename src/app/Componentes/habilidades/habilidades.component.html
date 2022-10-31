@@ -1,94 +1,31 @@
 <div class="row text-center">
-    <h2>Habilidades Blandas</h2>
-    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-3">
+    <h2 class="text-center fst-italic">Habilidades</h2>
+    <div>
+        <button routerLink="/NuevaHabilidad" class="btn btn-outline-secondary btn-lg text-dark fs-5 fw-bold me-2" *ngIf="isLogged">Nueva Habilidad</button>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-3" *ngFor="let habilidades of habilidades" >
         <circle-progress
-                    [percent]="85"
-                    [radius]="50"
+                    [percent]="(habilidades.porcentaje)"
+                    [radius]="80"
                     [outerStrokeWidth]="8"
                     [innerStrokeWidth]="4"
-                    [title]="'Prueba'"
-                    [titleFontSize]="''"
+                    [title]="(habilidades.nombre)"
+                    [titleColor]="'black'"
+                    [titleFontSize]="'12px'"
+                    [showUnits]="false"
+                    [showSubtitle]="false"
                     [outerStrokeColor]="'violet'"
-                    [innerStrokeColor]="'indigo'"
+                    [innerStrokeColor]="''"
                     [animation]="true"
                     [animationDuration]="800">
                     [subtitleFontSize]="'0'"
                 </circle-progress>
+                
+        <div>
+            <button class="btn btn-primary" routerLink="/EditarHabilidad/{{habilidades.id}}" *ngIf="isLogged">Editar</button>
+            <button class="btn btn-secondary" (click)="delete(habilidades.id)" *ngIf="isLogged">Borrar</button>
+        </div>
+                
     </div>
-    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-3">
-        <circle-progress
-                    [percent]="85"
-                    [radius]="50"
-                    [outerStrokeWidth]="8"
-                    [innerStrokeWidth]="4"
-                    [title]="'Prueba'"
-                    [titleFontSize]="''"
-                    [outerStrokeColor]="'violet'"
-                    [innerStrokeColor]="'indigo'"
-                    [animation]="true"
-                    [animationDuration]="800">
-                    [subtitleFontSize]="'0'"
-                </circle-progress>
-    </div>
-    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-3">
-        <circle-progress
-                    [percent]="85"
-                    [radius]="50"
-                    [outerStrokeWidth]="8"
-                    [innerStrokeWidth]="4"
-                    [title]="'Prueba'"
-                    [titleFontSize]="''"
-                    [outerStrokeColor]="'violet'"
-                    [innerStrokeColor]="'indigo'"
-                    [animation]="true"
-                    [animationDuration]="800">
-                    [subtitleFontSize]="'0'"
-                </circle-progress>
-    </div>
-    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-3">
-        <circle-progress
-                    [percent]="85"
-                    [radius]="50"
-                    [outerStrokeWidth]="8"
-                    [innerStrokeWidth]="4"
-                    [title]="'Prueba'"
-                    [titleFontSize]="''"
-                    [outerStrokeColor]="'violet'"
-                    [innerStrokeColor]="'indigo'"
-                    [animation]="true"
-                    [animationDuration]="800">
-                    [subtitleFontSize]="'0'"
-                </circle-progress>
-    </div>
-    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-3">
-        <circle-progress
-                    [percent]="85"
-                    [radius]="50"
-                    [outerStrokeWidth]="8"
-                    [innerStrokeWidth]="4"
-                    [title]="'Prueba'"
-                    [titleFontSize]="''"
-                    [outerStrokeColor]="'violet'"
-                    [innerStrokeColor]="'indigo'"
-                    [animation]="true"
-                    [animationDuration]="800">
-                    [subtitleFontSize]="'0'"
-                </circle-progress>
-    </div>
-    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-3">
-        <circle-progress
-                    [percent]="85"
-                    [radius]="50"
-                    [outerStrokeWidth]="8"
-                    [innerStrokeWidth]="4"
-                    [title]="'Prueba'"
-                    [titleFontSize]="''"
-                    [outerStrokeColor]="'violet'"
-                    [innerStrokeColor]="'indigo'"
-                    [animation]="true"
-                    [animationDuration]="800">
-                    [subtitleFontSize]="'0'"
-                </circle-progress>
-    </div>
-    <h2>Habilidades Duras</h2>
+    
 </div>

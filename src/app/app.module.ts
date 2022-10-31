@@ -14,6 +14,13 @@ import { HomeComponent } from './Componentes/home/home.component';
 import { LoginComponent } from './Componentes/login/login.component';
 import {HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { interceptorProvider } from '../service/interceptor';
+import { NuevaExperienciaComponent } from './Componentes/experiencia/nueva-experiencia.component';
+import { EditarExpComponent } from './Componentes/experiencia/editar-exp.component';
+import { NuevaEducacionComponent } from './Componentes/educacion/nueva-educacion.component';
+import { EditarEducacionComponent } from './Componentes/educacion/editar-educacion.component';
+import { EditarHabComponent } from './Componentes/habilidades/editar-hab.component';
+import { NuevaHabComponent } from './Componentes/habilidades/nueva-hab.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +32,13 @@ import { FormsModule } from '@angular/forms';
     HabilidadesComponent,
     ProyectosComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    NuevaExperienciaComponent,
+    EditarExpComponent,
+    NuevaEducacionComponent,
+    EditarEducacionComponent,
+    EditarHabComponent,
+    NuevaHabComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +47,9 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
