@@ -21,6 +21,7 @@ import { NuevaEducacionComponent } from './Componentes/educacion/nueva-educacion
 import { EditarEducacionComponent } from './Componentes/educacion/editar-educacion.component';
 import { EditarHabComponent } from './Componentes/habilidades/editar-hab.component';
 import { NuevaHabComponent } from './Componentes/habilidades/nueva-hab.component';
+import { EditarAcercaComponent } from './Componentes/acerca-de/editar-acerca.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { NuevaHabComponent } from './Componentes/habilidades/nueva-hab.component
     NuevaEducacionComponent,
     EditarEducacionComponent,
     EditarHabComponent,
-    NuevaHabComponent
+    NuevaHabComponent,
+    EditarAcercaComponent
   ],
   imports: [
     BrowserModule,
